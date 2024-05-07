@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <!--<link rel="stylesheet" href="styles.css">>-->
+
+</head>
+<body style="background-color: #ccd8c1;">
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Recipe Finder</h1>
+        </div>
+
+        <div class="text-center mb-4 mx-auto" style="width: 800px;">
+            <p>Welcome to Recipe Finder!</p>
+            <p>Prepare to have endless recipes at your hands! With Recipe Finder, 
+                you can type in any food and see what you'll need to make it. This includes ingredients, cooking instructions, 
+                and serving sizes. Thanks to Recipe Finder, there's nothing holding you back from learning how to cook 
+                that food you've been craving!</p>
+            <p>Enter a food into the search bar and get started today!</p>
+        </div>
+        
+        <div class="input-group mb-4 mx-auto" style="width: 700px;">
+            <input type="text" id="food" class="form-control" placeholder="Enter the name of a food..." required>
+            <div class="input-group-append">
+                <button id="searchButton" class="btn btn-primary" style="background-color: #e5cce5; border: none; color: black;">Find Recipe</button>
+            </div>
+        </div>
+        
+        <div class=" output-container p-3 rounded" style="width:1000px; margin: 0 auto; overflow: auto; background-color:#f6f0e8;">
+            <div>
+                <h4 class="text-center" style="padding-bottom: 20px; padding-top: 10px;">Your Recipe:</h4>
+            </div>
+            <div class="text-center mb-4">
+                <div id="recipeResult" class="px-3 py-3" style="text-align: left; background-color:#f6f0e8;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- External JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+    
+</body>
+</html>
