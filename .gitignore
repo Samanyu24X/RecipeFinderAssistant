@@ -1,0 +1,5 @@
+# Ignore config.py files
+config.py
+
+# Ignore __pycache__ directory
+__pycache__/
